@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './assets/scss/styles.scss';
 import TrendingList from './components/TrendingList';
 
 class App extends Component {

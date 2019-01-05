@@ -1,6 +1,7 @@
 import React from 'react';
 import { FETCH_STATUS } from '../../helpers/common/types';
 import keys from '../../config/keys';
+import MovieItem from '../MovieItem';
 
 class TrendingList extends React.Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class TrendingList extends React.Component {
   renderTrending() {
     return this.state.trendings.map(trend => (
       <li key={trend.id}>
-        <p> {trend.title} </p>
+        <MovieItem movie={trend} />
       </li>
     ));
   }
