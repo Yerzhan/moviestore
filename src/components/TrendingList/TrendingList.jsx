@@ -39,7 +39,7 @@ class TrendingList extends React.Component {
 
   renderTrending() {
     return this.state.trendings.map(trend => (
-      <li key={trend.id}>
+      <li key={trend.id} style={liStyle}>
         <MovieItem movie={trend} />
       </li>
     ));
@@ -69,4 +69,13 @@ const ulStyle = {
   margin: 0,
   listStyleType: 'none',
   paddingInlineStart: 0,
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap'
 };
+
+const liStyle = {
+  listStyle: 'none',
+  display: 'inline-block',
+  width: '20%'
+}
