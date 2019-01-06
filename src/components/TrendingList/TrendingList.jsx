@@ -2,6 +2,7 @@ import React from 'react';
 import { FETCH_STATUS } from '../../helpers/common/types';
 import keys from '../../config/keys';
 import MovieItem from '../MovieItem';
+import styles from './TrendingList.module.scss';
 
 class TrendingList extends React.Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class TrendingList extends React.Component {
 
   renderTrending() {
     return this.state.trendings.map(trend => (
-      <li key={trend.id} style={liStyle}>
+      <li key={trend.id}>
         <MovieItem movie={trend} />
       </li>
     ));
@@ -53,7 +54,7 @@ class TrendingList extends React.Component {
         return <p>Fetch error.</p>;
       case FETCH_STATUS.SUCCESS:
         return (
-          <ul style={ulStyle}>
+          <ul className={styles.TrendingList}>
             {this.renderTrending()}
           </ul>
         );
@@ -64,18 +65,3 @@ class TrendingList extends React.Component {
 }
 
 export default TrendingList;
-
-const ulStyle = {
-  margin: 0,
-  listStyleType: 'none',
-  paddingInlineStart: 0,
-  display: 'flex',
-  flexDirection: 'row',
-  flexWrap: 'wrap'
-};
-
-const liStyle = {
-  listStyle: 'none',
-  display: 'inline-block',
-  width: '20%'
-}

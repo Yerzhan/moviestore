@@ -1,0 +1,14 @@
+.TrendingList {
+  margin: 0;
+  list-style: none;
+  padding-inline-start: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  li {
+    list-style: none;
+    display: inline-block;
+    width: 20%;
+  }
+}
