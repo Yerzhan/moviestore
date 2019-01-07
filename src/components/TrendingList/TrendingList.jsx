@@ -39,17 +39,19 @@ class TrendingList extends React.Component {
   }
 
   renderTrending() {
-    return (<div className={styles.TrendingList}>
-      <FeaturedItem />
-      <h2>Trending Now</h2>
-      <ul>
-        {this.state.trendings.map(trend => (
-          <li key={trend.id}>
-            <MovieItem movie={trend} />
-          </li>
-        ))}
-      </ul>
-    </div>);
+    return (
+      <div className={styles.TrendingList}>
+        <FeaturedItem />
+        <h2>Trending Now</h2>
+        <ul>
+          {this.state.trendings.map(trend => (
+            <li key={trend.id}>
+              <MovieItem movie={trend} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
   }
 
   render() {
