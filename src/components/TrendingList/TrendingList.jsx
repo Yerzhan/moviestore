@@ -1,7 +1,7 @@
 import React from 'react';
 import { FETCH_STATUS } from '../../helpers/common/types';
 import keys from '../../config/keys';
-import MovieItem from '../MovieItem';
+import MovieItem, { FeaturedItem } from '../MovieItem';
 import styles from './TrendingList.module.scss';
 
 class TrendingList extends React.Component {
@@ -39,11 +39,17 @@ class TrendingList extends React.Component {
   }
 
   renderTrending() {
-    return this.state.trendings.map(trend => (
-      <li key={trend.id}>
-        <MovieItem movie={trend} />
-      </li>
-    ));
+    return (<div className={styles.TrendingList}>
+      <FeaturedItem />
+      <h2>Trending Now</h2>
+      <ul>
+        {this.state.trendings.map(trend => (
+          <li key={trend.id}>
+            <MovieItem movie={trend} />
+          </li>
+        ))}
+      </ul>
+    </div>);
   }
 
   render() {
@@ -53,11 +59,7 @@ class TrendingList extends React.Component {
       case FETCH_STATUS.ERROR:
         return <p>Fetch error.</p>;
       case FETCH_STATUS.SUCCESS:
-        return (
-          <ul className={styles.TrendingList}>
-            {this.renderTrending()}
-          </ul>
-        );
+        return this.renderTrending();
       default:
         return null;
     }
