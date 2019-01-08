@@ -86,20 +86,36 @@
   position: relative;
   background-size: cover;
   min-height: 800px;
+  display: flex;
 }
 
 .Featured .content {
   position: relative;
   z-index: 4;
   width: 500px;
-  left: 10vw;
-  top: 10vw;
+  margin-left: 5vw;
+  margin-top: 5vh;
 }
+.Featured .poster {
+  width: 350px;
+  height: 520px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  transition: 0.7s;
+  background-color: white;
+  padding: 4px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  transform: perspective(1000px) rotateY(10deg);
+}
+
+.poster:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+  transform: perspective(0px) rotateY(0deg);
+}
+
 .Featured .content .logo {
-  max-width: 400px;
-  display: block;
-  position: relative;
-  left: -5px;
+  width: 342px;
+  height: 513px;
 }
 .Featured .content p {
   width: 100%;

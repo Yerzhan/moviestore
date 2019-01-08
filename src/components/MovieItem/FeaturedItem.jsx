@@ -6,14 +6,12 @@ class FeaturedItem extends React.Component {
     return (
       <div
         className={styles.Featured}
-        style={{ backgroundImage: 'url(https://images.alphacoders.com/633/633643.jpg)' }}
+        style={{ backgroundImage: `url(${this.props.background})` }}
       >
         <div className={styles.content}>
-          <img
-            className={styles.logo}
-            src="http://www.returndates.com/backgrounds/narcos.logo.png"
-            alt="narcos background"
-          />
+          <div className={styles.poster}>
+            <img className={styles.logo} src={this.props.poster} alt='featured poster'/>
+          </div>
           <h2>{this.props.title}</h2>
           <p>{this.props.description}</p>
         </div>
