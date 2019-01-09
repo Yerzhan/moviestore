@@ -3,7 +3,6 @@ import { FETCH_STATUS } from '../../helpers/common/types';
 import keys from '../../config/keys';
 import MovieItem, { FeaturedItem } from '../MovieItem';
 import styles from './TrendingList.module.scss';
-import config from '../../config/imageConfig.json';
 
 class TrendingList extends React.Component {
   constructor(props) {
@@ -40,15 +39,10 @@ class TrendingList extends React.Component {
   }
 
   renderTrending() {
-    const featured = this.state.trendings[0];
-    console.log(featured);
     return (
       <div className={styles.TrendingList}>
         <FeaturedItem
-          title={featured.title}
-          description={featured.overview}
-          background={`${config.images.secure_base_url}/original${featured.backdrop_path}`}
-          poster={`${config.images.secure_base_url}/w342${featured.poster_path}`}
+          items={this.state.trendings}
         />
         <h2>Trending Now</h2>
         <ul>
