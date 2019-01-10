@@ -3,6 +3,7 @@ import { FETCH_STATUS } from '../../helpers/common/types';
 import keys from '../../config/keys';
 import MovieItem, { FeaturedItem } from '../MovieItem';
 import styles from './TrendingList.module.scss';
+import SimpleButton from '../SimpleButton';
 
 class TrendingList extends React.Component {
   constructor(props) {
@@ -41,7 +42,8 @@ class TrendingList extends React.Component {
     return (
       <div className={styles.TrendingList}>
         <FeaturedItem items={this.state.trendings} />
-        <h2>Trending Now</h2>
+        <h2 className={styles.TrendingHeader}>Trending Now</h2>
+        <SimpleButton />
         <ul>
           {this.state.trendings.map(trend => (
             <li key={trend.id}>

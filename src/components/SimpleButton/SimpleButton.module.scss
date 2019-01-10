@@ -1,0 +1,26 @@
+@import '../../assets/scss/config';
+
+.Button {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid rgba(245, 245, 241, 0.2);
+  border-radius: 44px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: border .125s ease, background .125s ease;
+}
+.Button:hover {
+  border: 2px solid $white;
+}
+.Button[data-primary='true'] {
+  border: 2px solid $light_blue;
+}
+.Button[data-primary='true']:hover {
+  background: $light_blue;
+}

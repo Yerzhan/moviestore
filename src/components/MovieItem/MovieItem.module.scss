@@ -87,6 +87,7 @@
   background-size: cover;
   min-height: 800px;
   display: flex;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
 }
 
 .Featured .content {
@@ -121,9 +122,6 @@
   width: 100%;
 }
 .Featured .content .button-wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 400px;
   margin-top: 30px;
@@ -145,8 +143,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 
