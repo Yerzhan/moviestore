@@ -24,7 +24,6 @@ class TrendingList extends React.Component {
     try {
       const response = await fetch(url);
       const results = await response.json();
-      console.log(results);
 
       this.setState({
         fetchStatus: FETCH_STATUS.SUCCESS,
@@ -41,9 +40,7 @@ class TrendingList extends React.Component {
   renderTrending() {
     return (
       <div className={styles.TrendingList}>
-        <FeaturedItem
-          items={this.state.trendings}
-        />
+        <FeaturedItem items={this.state.trendings} />
         <h2>Trending Now</h2>
         <ul>
           {this.state.trendings.map(trend => (

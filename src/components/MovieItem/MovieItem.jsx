@@ -3,7 +3,6 @@ import style from './MovieItem.module.scss';
 import config from '../../config/imageConfig.json';
 
 const MovieItem = ({ movie }) => {
-  console.log(movie);
   const { backdrop_path, title, vote_average, overview } = movie;
   return (
     <div className={style.MovieItem} style={{ backgroundImage: `url(${config.images.secure_base_url}/${config.images.backdrop_size_s}${backdrop_path})` }} >

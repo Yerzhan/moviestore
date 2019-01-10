@@ -148,3 +148,22 @@
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+
+
+.reveal-enter {
+  opacity: 0.01;
+}
+
+.reveal-enter.reveal-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.reveal-leave {
+  opacity: 1;
+}
+
+.reveal-leave.reveal-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
