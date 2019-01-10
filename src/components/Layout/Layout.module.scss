@@ -1,0 +1,17 @@
+.Footer {
+  padding: 30px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      color: #cccccc;
+    }
+
+    img {
+      height: 50px;
+    }
+  }
+}
