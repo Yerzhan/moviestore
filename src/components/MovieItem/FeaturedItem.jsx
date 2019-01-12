@@ -1,5 +1,4 @@
 import React from 'react';
-import { CSSTransitionGroup } from 'react-transition-group'
 
 import styles from './MovieItem.module.scss';
 import config from '../../config/imageConfig.json';
@@ -32,25 +31,20 @@ class FeaturedItem extends React.Component {
     const poster = `${config.images.secure_base_url}/w342${featured.poster_path}`;
 
     return (
-      <CSSTransitionGroup
-      transitionName="reveal"
-      transitionEnterTimeout={300}
-      transitionLeaveTimeout={300}>
-        <div
-          key={this.state.itemIndex}
-          className={styles.Featured}
-          style={{ backgroundImage: background }}
-        >
-          <div className={styles.content}>
-            <div className={styles.poster}>
-              <img className={styles.logo} src={poster} alt='featured poster'/>
-            </div>
-            <h2>{featured.title}</h2>
-            <p>{featured.overview}</p>
+      <div
+        key={this.state.itemIndex}
+        className={styles.Featured}
+        style={{ backgroundImage: background }}
+      >
+        <div className={styles.content}>
+          <div className={styles.poster}>
+            <img className={styles.logo} src={poster} alt='featured poster'/>
           </div>
-          <div className={styles.overlay}></div>
+          <h2>{featured.title}</h2>
+          <p>{featured.overview}</p>
         </div>
-       </CSSTransitionGroup> 
+        <div className={styles.overlay}></div>
+      </div>
     );
   }
 }
