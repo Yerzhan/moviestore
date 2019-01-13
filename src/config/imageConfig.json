@@ -2,7 +2,7 @@
   "images": {
     "base_url": "http://image.tmdb.org/t/p/",
     "secure_base_url": "https://image.tmdb.org/t/p/",
-    "backdrop_size_s": "w300",
+    "backdrop_size_s": "w780",
     "backdrop_sizes": [
       "w300",
       "w780",

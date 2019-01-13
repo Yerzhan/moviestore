@@ -6,6 +6,7 @@ class Header extends Component {
     return (
       <div id="navigation" className={styles.Navigation}>
         <nav>
+          <span className={styles.logo}><a href='/'>moovies</a></span>
           <ul>
             <li>About</li>
           </ul>
