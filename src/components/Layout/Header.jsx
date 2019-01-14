@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Layout.module.scss';
 
 class Header extends Component {
@@ -6,9 +7,9 @@ class Header extends Component {
     return (
       <div id="navigation" className={styles.Navigation}>
         <nav>
-          <span className={styles.logo}><a href='/'>moovies</a></span>
+          <span className={styles.logo}><Link to='/'>moovies</Link></span>
           <ul>
-            <li>About</li>
+            <li><Link to='/about/'>About</Link></li>
           </ul>
         </nav>
       </div>
