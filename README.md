@@ -1,6 +1,6 @@
 SPA on React. Gets movie information from TMDb and displays in a beautiful layout.
 
-[[https://github.com/Yerzhan/moviestore/blob/master/screenshot1.jpg|alt=screenshot]]
+![Screenshot](screenshot1.jpg)
 
 ## Available Scripts
 
