@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SPA on React. Gets movie information from TMDb and displays in a beautiful layout.
+
+![Screenshot](screenshot1.jpg)
 
 ## Available Scripts
 
