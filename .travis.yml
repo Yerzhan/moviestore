@@ -4,6 +4,8 @@ node_js:
 cache:
   directories:
     - node_modules
+env:
+  - NODE_ENV=production
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
