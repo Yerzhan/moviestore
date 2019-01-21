@@ -16,3 +16,5 @@ deploy:
   bucket: $S3_MDB_BUCKET
   skip_cleanup: true
   local-dir: build
+  acl: public_read
+  cache_control: 'max-age=21600'

@@ -1,3 +1,3 @@
 module.exports = {
-  TMDBapiKey: process.env.TMDB_API_KEY
+  TMDBapiKey: process.env.REACT_APP_TMDB_API_KEY
 }
