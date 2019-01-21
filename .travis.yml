@@ -7,6 +7,11 @@ cache:
 env:
   global:
     - NODE_ENV=production
+before_script:
+  - npm install
+  - npm test
+script:
+  - npm run build
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
