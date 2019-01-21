@@ -17,5 +17,5 @@ deploy:
   region: eu-west-2
   skip_cleanup: true
   local-dir: build
-  acl: public_read
-  cache_control: 'max-age=21600'
+before_deploy:
+  - aws s3 rm s3://$S3_MDB_BUCKET --recursive
