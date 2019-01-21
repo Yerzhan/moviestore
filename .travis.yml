@@ -4,18 +4,15 @@ node_js:
 cache:
   directories:
     - node_modules
-env:
-  global:
-    - NODE_ENV=production
 before_script:
   - npm install
   - npm test
 script:
-  - npm run build
+  - REACT_APP_TMDB_API_KEY=$TMDB_API_KEY npm run build
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: $S3_MDB_BUCKET
   skip_cleanup: true
-  local-dir: public
+  local-dir: build
